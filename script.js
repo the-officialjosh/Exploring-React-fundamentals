@@ -131,8 +131,8 @@ function getBook(id) {
 }
 
 // Destructuring Array
-
-const book = getBook(1);
+/*
+const book = getBook(3);
 
 // const title = book.title;
 // const author = book.author;
@@ -180,4 +180,36 @@ console.log(true && 'Some String');
 console.log(false && 'Some String');
 console.log(hasMovieAdaptation && 'Has movie adapr');
 
-console.log('Log');
+// falsy: 0, '' , null, undefined
+console.log('Log' && 'some String');
+console.log(0 && 'somw');
+
+console.log(true || 'some string');
+console.log(false || 'some string');
+
+console.log(book.translations.spanish);
+
+const spanishTranslation = book.translations.spanish || 'NOT TRANSLATED';
+spanishTranslation;
+
+// console.log(book.reviews.librarything.reviewsCount);
+// const countWrong = book.reviews.librarything.reviewsCount || 'no data';
+// countWrong;
+
+// const count = book.reviews.librarything.reviewsCount ?? 'no data';
+// count;
+
+function getTotalReviewCount(book) {
+  const goodreads = book.reviews?.goodreads?.reviewsCount ?? 0;
+  const librarything = book.reviews?.librarything?.reviewsCount ?? 0;
+
+  return goodreads + librarything;
+}
+console.log(getTotalReviewCount(book));
+
+*/
+
+const books = getBooks();
+
+const x = [1, 2, 3, 4, 5, 6, 7].map((el) => el * 2);
+console.log(x);
